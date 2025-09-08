@@ -1,0 +1,17 @@
+[package]
+name = "hailx_list"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "hailx_list"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.19", features = ["extension-module", "auto-initialize"] }
+datafusion = "49.0.2"
+vortex-array = "0.52.1"
+vortex-dtype = "0.52.1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
